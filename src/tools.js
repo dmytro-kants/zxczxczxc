@@ -32,7 +32,7 @@ export const EDITOR_JS_TOOLS = {
     class: ImageTool,
     config: {
       endpoints: {
-        byFile: 'http://localhost:5000/api/uploadFile', // Your backend file uploader endpoint
+        byFile: 'https://asfasfasfasfasf-8xws.onrender.com/api/uploadFile', // Your backend file uploader endpoint
     
       }
     }
