@@ -18,6 +18,27 @@ const INITIAL_DATA = {
 
 function App() {
   const [data, setData] = useState(INITIAL_DATA);
+  const addUser = () => {
+    fetch('https://asfasfasfasfasf-8xws.onrender.com/api/addUser', {
+      method: 'POST', // или 'GET', в зависимости от вашего случая
+      headers: {
+        'Content-Type': 'application/json',
+        // Дополнительные заголовки, если необходимо
+      },
+      body: JSON.stringify({
+       email:"zxczxczxc@gmail.com"
+      }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Обработка данных от сервера
+        console.log(data);
+      })
+      .catch(error => {
+        // Обработка ошибок
+        console.error('Error:', error);
+      });
+  }
   const customParsers = {
     customBlock: function(data, config) {
         // parsing functionality
@@ -42,7 +63,7 @@ function App() {
         Save
       </button>
       <>
-      <h1>This is my awesome editor!</h1><img src="http://res.cloudinary.com/dlbsa9dgi/image/upload/v1698335471/itoe0kd0ut1zq9nbkxrr.jpg" alt="" /><p class="paragraph"> gucci prada </p><img src="http://res.cloudinary.com/dlbsa9dgi/image/upload/v1698335494/jkabdt4745443vosj7j1.jpg" alt="" />
+      <button onClick={addUser}></button>
       </>
     </div>
   );
